@@ -1,0 +1,8 @@
+# Archivos
+InternetSpeed.db
+
+#Directorios
+entorno_virtual/
+pages/__pycache__/
+pages/Utils/__pycache__/
+bd/
