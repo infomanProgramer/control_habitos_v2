@@ -5,4 +5,4 @@ InternetSpeed.db
 entorno_virtual/
 pages/__pycache__/
 pages/Utils/__pycache__/
-bd/
+#bd/

@@ -11,7 +11,7 @@ def historial_registro_diario():
             from SEGUIMIENTOHABITOS SEG
             INNER JOIN HABITOS HAB ON SEG.ID_HABITO = HAB.ID_HABITO
             WHERE SEG.ESTADO = True
-            ORDER BY SEG.FECHA_REGISTRO DESC
+            ORDER BY SEG.FECHA_REGISTRO DESC, HAB.ID_CATEGORIAHABITOS DESC
             """
     
     cursor.execute(query)
@@ -24,7 +24,7 @@ def historial_registro_diario():
     cont = 0
     while cont < len(rowsSeg):
         if rowsSeg[cont][0] == fecha_pivot:
-            elemento_html = elemento_html + f' <span style="background-color: {rowsSeg[cont][2]}">{rowsSeg[cont][1]}</span> '
+            elemento_html = elemento_html + f' <span style="background-color: {rowsSeg[cont][2]}; padding:5px; margin: 2px; border-radius: 5px;">{rowsSeg[cont][1].strip()}</span> '
             cont += 1
         else:
             elemento_html = elemento_html + '</div>'

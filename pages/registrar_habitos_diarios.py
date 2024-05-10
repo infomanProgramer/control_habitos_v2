@@ -32,6 +32,7 @@ def registrar_habitos_diarios():
                 registroHabitos.append(createObjectDB("ID_HABITO", optionsI, "I"))
                 registroHabitos.append(createObjectDB("ESTADO", True, "B"))
                 registroHabitos.append(createObjectDB("FECHA_REGISTRO", "datetime('now', 'localtime')", "I"))
+                #registroHabitos.append(createObjectDB("FECHA_REGISTRO", "datetime(datetime('now', 'localtime'), '-1 day' )", "I"))
                 cursor.execute(addNewItemDB("SEGUIMIENTOHABITOS", registroHabitos))
             conn.commit()
             conn.close()
